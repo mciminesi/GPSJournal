@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.app.msc.gpsjournal.MainActivity"
+    android:background="@color/colorBackgroundSplash">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/btn_save"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_main_title"
+                android:id="@+id/txt_main_title"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:textColor="@color/colorText"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences"
+                android:ems="10"
+                android:id="@+id/editText_note"
+                android:layout_below="@+id/txt_main_title"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/txt_enter_note"
+                android:textSize="20sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/black"
+                android:background="@android:color/white"
+                android:gravity="top|left"
+                android:textColorHint="@color/colorText"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:minLines="3"
+                android:layout_marginBottom="8dp">
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_get_gps"
+                android:id="@+id/txt_get_gps"
+                android:layout_below="@+id/btn_gps"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textColor="@color/colorText"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_gps"
+                android:id="@+id/btn_gps"
+                android:layout_below="@+id/editText_note"
+                android:layout_centerHorizontal="true"
+                android:onClick="getGPS"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+                android:textSize="20sp"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_x_coord"
+                android:id="@+id/txt_x_coord"
+                android:layout_below="@+id/btn_gps"
+                android:visibility="invisible"
+                android:textSize="20sp"
+                android:textColor="@color/colorText"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_x_coord"
+                android:id="@+id/txt_x_coord_disp"
+                android:layout_below="@+id/btn_gps"
+                android:layout_toEndOf="@+id/txt_x_coord"
+                android:visibility="invisible"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorText"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_y_coord"
+                android:id="@+id/txt_y_coord"
+                android:layout_below="@+id/btn_gps"
+                android:layout_toEndOf="@+id/txt_x_coord_disp"
+                android:visibility="invisible"
+                android:textSize="20sp"
+                android:textColor="@color/colorText"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_y_coord"
+                android:id="@+id/txt_y_coord_disp"
+                android:layout_below="@+id/btn_gps"
+                android:layout_toEndOf="@+id/txt_y_coord"
+                android:visibility="invisible"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorText"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_photo"
+                android:id="@+id/btn_photo"
+                android:layout_below="@+id/txt_y_coord"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+                android:onClick="launchCamera"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_below="@+id/btn_photo"
+                android:scaleType="centerCrop" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save"
+        android:id="@+id/btn_save"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveEntry"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp" />
+
+</RelativeLayout>

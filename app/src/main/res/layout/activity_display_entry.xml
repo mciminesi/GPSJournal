@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.app.msc.gpsjournal.DisplayEntryActivity"
+    android:background="@color/colorBackgroundSplash">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+        android:layout_above="@+id/btn_map">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_date_display"
+                android:id="@+id/txt_date_display"
+                android:textSize="20sp"
+                android:textColor="@color/colorText"
+                android:layout_marginBottom="4dp"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_note_display"
+                android:id="@+id/txt_note_display"
+                android:layout_below="@+id/txt_date_display"
+                android:layout_alignParentStart="true"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:minLines="3"
+                android:background="@android:color/white"
+                android:textIsSelectable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_x_coord"
+                android:id="@+id/txt_lat_label"
+                android:layout_below="@+id/txt_note_display"
+                android:layout_alignParentStart="true"
+                android:textSize="16sp"
+                android:textColor="@color/colorText"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_latitude_display"
+                android:id="@+id/txt_lat_display"
+                android:layout_below="@+id/txt_note_display"
+                android:layout_toEndOf="@+id/txt_lat_label"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_y_coord"
+                android:id="@+id/txt_long_label"
+                android:layout_below="@+id/txt_note_display"
+                android:layout_toEndOf="@+id/txt_lat_display"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorText"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_longitude_display"
+                android:id="@+id/txt_long_display"
+                android:layout_below="@+id/txt_note_display"
+                android:layout_toEndOf="@+id/txt_long_label"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="4dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image_display"
+                android:layout_below="@+id/txt_lat_display"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/desc_image_display"
+                android:clickable="true"
+                android:layout_marginBottom="4dp"
+                android:scaleType="centerCrop" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_map"
+        android:id="@+id/btn_map"
+        android:textSize="30sp"
+        android:textColor="@color/colorText"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:textStyle="bold"
+        android:onClick="launchMap"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp" />
+
+</RelativeLayout>

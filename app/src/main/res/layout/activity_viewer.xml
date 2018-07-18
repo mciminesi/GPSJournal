@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.app.msc.gpsjournal.ViewerActivity"
+    android:background="@color/colorBackgroundSplash">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_saved_entries"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_above="@+id/btn_splash"
+        android:scrollIndicators="right"
+        android:smoothScrollbar="false"
+        android:listSelector="@color/colorBackgroundMain"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_splash"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        style="@android:style/Widget.DeviceDefault.Button"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:id="@+id/btn_splash"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+</RelativeLayout>

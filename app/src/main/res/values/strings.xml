@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">GPSJournal</string>
+    <string name="title_activity_splash">Splash Activity</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_viewer">Viewer</string>
+
+    <string name="txt_splash_title">GPS Journal</string>
+    <string name="txt_main_title">Create New Entry</string>
+
+    <string name="txt_enter_note">Enter your note:</string>
+    <string name="txt_get_gps">Current GPS Position</string>
+    <string name="txt_x_coord">Lat:</string>
+    <string name="txt_y_coord">Long:</string>
+
+    <string name="txt_dates">Date</string>
+    <string name="txt_notes">Note line 1\nNote line 2\nNote line 3\nNote line 4</string>
+
+    <string name="txt_date_display">08-17-1977 04:30:00 AM EDT</string>
+    <string name="txt_note_display">Note line 1\nNote line 2\nNote line 3\nNote line 4</string>
+    <string name="txt_latitude_display">63.9123</string>
+    <string name="txt_longitude_display">71.5123</string>
+
+    <string name="btn_create">Create</string>
+    <string name="btn_viewer">View</string>
+    <string name="btn_save">Save Entry</string>
+    <string name="btn_gps">Get GPS Location</string>
+    <string name="btn_photo">Take Photo</string>
+    <string name="btn_splash">Menu</string>
+
+    <string name="desc_image_preview">Preview of image.</string>
+    <string name="desc_image_display">Image from camera.</string>
+    <string name="btn_map">Show Location</string>
+
+    <string name="MY_API_KEY">AIzaSyCtWqH9PqVQdVArk47RJxNL6nXFIW9eLLQ</string>
+
+
+</resources>
